@@ -15,7 +15,7 @@ const galleryBox = (galleryItems) =>
 const createGalleryBox = galleryBox(galleryItems);
 gallery.innerHTML = createGalleryBox;
 
-let lightbox = new SimpleLightbox(".gallery__link");
-gallery.on("show.simplelightbox", function () {
-  // do something…
+var lightbox = new SimpleLightbox(".gallery a", {
+  captionDelay: 250,
+  captionsData: "alt",
 });
